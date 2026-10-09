@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Jean Carl R. Tapelite, BS Information Technology student seeking an internship.">
+  <title>Jean Carl R. Tapelite | IT Internship Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">JCT</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle" class="theme-toggle" aria-label="Switch light or dark theme">&#9790;</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="profile-pic">
+          <img src="images/profile.jpg" alt="Photo of Jean Carl R. Tapelite"
+               onerror="this.style.display='none'; this.parentElement.classList.add('no-photo'); this.parentElement.setAttribute('data-initials','JC');">
+        </div>
+        <div class="hero-text">
+          <h1>Jean Carl R. Tapelite</h1>
+          <p class="tagline" id="tagline" data-text="Aspiring web developer | BS Information Technology student">Aspiring web developer | BS Information Technology student</p>
+          <p class="intro">I build simple, clean websites and I am looking for an internship where I can learn from real projects and grow as a developer.</p>
+          <div class="cta">
+            <a href="#projects" class="btn">View my projects</a>
+            <a href="#contact" class="btn btn-outline">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <article class="card">
+          <h3>Biography</h3>
+          <p>I am Jean Carl R. Tapelite, a second-year Information Technology student from Nueva Vizcaya. I enjoy turning ideas into working web pages and I am always practicing new things in HTML, CSS and JavaScript.</p>
+        </article>
+
+        <article class="card">
+          <h3>Educational Background</h3>
+          <ul class="timeline">
+            <li><strong>Bachelor of Science in Information Technology</strong><br>Nueva Vizcaya State University<br><span class="muted">Second Year &middot; Expected graduation: 2029</span></li>
+            <li><strong>Senior High School (ABM Strand, with honors)</strong><br>Bambang National High School<br><span class="muted">Graduated 2025</span></li>
+            <li><strong>High School</strong><br>Munguia National High School</li>
+            <li><strong>Elementary</strong><br>Munguia Elementary School</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Career Goals</h3>
+          <p>To complete an internship in web development or IT support, apply what I learn in class to real work, and become a skilled full-stack developer.</p>
+        </article>
+
+        <article class="card">
+          <h3>Interests</h3>
+          <ul class="plain-list">
+            <li>Hiking and jogging</li>
+            <li>Watching movies and anime</li>
+            <li>Playing online games</li>
+            <li>Learning new web technologies</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <article class="card">
+          <h3>Programming Languages</h3>
+          <div class="skill"><span>HTML</span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+          <div class="skill"><span>CSS</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+          <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+        </article>
+        <article class="card">
+          <h3>Tools and Technologies</h3>
+          <ul class="tags">
+            <li>VS Code</li><li>Git</li><li>GitHub</li><li>GitHub Pages</li><li>JSON</li><li>REST API</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Soft Skills</h3>
+          <ul class="tags">
+            <li>Teamwork</li><li>Communication</li><li>Time management</li><li>Willingness to learn</li><li>Problem solving</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="section-note">These projects are loaded from <code>data/projects.json</code>.</p>
+      <div id="project-list" class="project-grid" aria-live="polite">
+        <p class="message">Loading projects...</p>
+      </div>
+
+      <h3 class="sub-heading">Latest GitHub Repositories</h3>
+      <ul id="repo-list" class="repo-list" aria-live="polite">
+        <li class="message">Loading repositories...</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <article class="card">
+          <h3>Let's connect</h3>
+          <p>I am open to internship opportunities. Send me a message or reach me here:</p>
+          <ul class="plain-list">
+            <li>Email: <a href="mailto:tapelitejeancarl@gmail.com">tapelitejeancarl@gmail.com</a></li>
+            <li>GitHub: <a id="github-link" href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></li>
+          </ul>
+        </article>
+
+        <form id="contact-form" class="card" novalidate>
+          <h3>Send a message</h3>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+          <span class="error" id="name-error"></span>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <span class="error" id="email-error"></span>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+          <span class="error" id="message-error"></span>
+
+          <button type="submit" class="btn">Send message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Jean Carl R. Tapelite. Thank you for visiting my portfolio!</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Student Grade Calculator",
+    "description": "A simple web app that computes a student's average grade from quiz, exam and activity scores and shows a pass or fail result.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "role": "Sole developer: designed the layout and wrote the calculation logic.",
+    "screenshot": "project1.png",
+    "link": "https://github.com/yourusername/grade-calculator",
+    "linkLabel": "View on GitHub"
+  },
+  {
+    "title": "Barangay Event Page",
+    "description": "A responsive one-page website announcing a barangay festival with a schedule, photo gallery and contact details.",
+    "technologies": ["HTML", "CSS", "Flexbox", "Grid"],
+    "role": "Front-end developer in a 3-member group project: built the page structure and responsive styling.",
+    "screenshot": "project2.png",
+    "link": "https://github.com/yourusername/barangay-event-page",
+    "linkLabel": "View on GitHub"
+  },
+  {
+    "title": "To-Do List App",
+    "description": "A task manager where users can add, complete and delete tasks, with a live counter of unfinished items.",
+    "technologies": ["HTML", "CSS", "JavaScript", "JSON"],
+    "role": "Sole developer: handled the interface and all JavaScript behavior.",
+    "screenshot": "project3.png",
+    "link": "https://github.com/yourusername/todo-list-app",
+    "linkLabel": "View on GitHub"
+  }
+]
