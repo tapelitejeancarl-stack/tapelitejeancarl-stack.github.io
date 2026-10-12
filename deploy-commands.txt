@@ -1,0 +1,9 @@
+(Optional. Only needed if you use Git instead of the website upload.)
+Run in the VS Code terminal, inside the project folder:
+
+git init
+git add .
+git commit -m "First version of my portfolio"
+git branch -M main
+git remote add origin https://github.com/tapelitejeancarl-stack/tapelitejeancarl-stack.github.io.git
+git push -u origin main
