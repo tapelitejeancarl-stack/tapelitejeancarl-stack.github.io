@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Log in to continue to your account.</p>
+
+        <form id="login-form" novalidate>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+            <label for="password">Password</label>
+            <div class="password-wrap">
+                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                <button type="button" id="toggle" class="toggle" aria-label="Show password">Show</button>
+            </div>
+
+            <div class="row">
+                <label class="remember"><input type="checkbox" name="remember"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="submit">Log in</button>
+            <p id="message" class="message" role="status"></p>
+        </form>
+
+        <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+    </main>
+
+    <script>
+        const pw = document.getElementById("password");
+        const toggle = document.getElementById("toggle");
+        toggle.addEventListener("click", () => {
+            const hidden = pw.type === "password";
+            pw.type = hidden ? "text" : "password";
+            toggle.textContent = hidden ? "Hide" : "Show";
+            toggle.setAttribute("aria-label", hidden ? "Hide password" : "Show password");
+        });
+
+        document.getElementById("login-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const msg = document.getElementById("message");
+            const email = document.getElementById("email").value.trim();
+            if (!email || !pw.value) {
+                msg.textContent = "Enter your email and password.";
+                msg.className = "message error";
+            } else {
+                msg.textContent = "Logged in (demo only, nothing was sent).";
+                msg.className = "message ok";
+            }
+        });
+    </script>
+</body>
+</html>
