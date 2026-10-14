@@ -1,199 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Jean Carl R. Tapelite, BS Information Technology student seeking an internship.">
-  <title>Jean Carl R. Tapelite | IT Internship Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <main class="card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Log in to continue to your account.</p>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="logo"><span class="logo-mark">JC</span>T</a>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-      <nav>
-        <ul id="nav-links" class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><button id="theme-toggle" class="theme-toggle" aria-label="Switch light or dark theme">&#9790;</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <form id="login-form" novalidate>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
 
-  <main>
+            <label for="password">Password</label>
+            <div class="password-wrap">
+                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                <button type="button" id="toggle" class="toggle" aria-label="Show password">Show</button>
+            </div>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <div class="photo-frame">
-          <div class="profile-pic">
-            <img src="profile.jpg" alt="Photo of Jean Carl R. Tapelite"
-                 onerror="this.style.display='none'; this.parentElement.classList.add('no-photo'); this.parentElement.setAttribute('data-initials','JC');">
-          </div>
-        </div>
-        <div class="hero-text">
-          <p class="eyebrow">Hello, I'm</p>
-          <h1>Jean Carl R. Tapelite</h1>
-          <p class="tagline" id="tagline" data-text="Aspiring web developer | BS Information Technology student">Aspiring web developer | BS Information Technology student</p>
-          <p class="intro">I build simple, clean websites and I am looking for an internship where I can learn from real projects and grow as a developer.</p>
-          <ul class="chips">
-            <li>BSIT, Second Year</li>
-            <li>Nueva Vizcaya State University</li>
-            <li class="chip-live">Open for internship</li>
-          </ul>
-          <div class="cta">
-            <a href="#projects" class="btn">View my projects</a>
-            <a href="#contact" class="btn btn-outline">Contact me</a>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="row">
+                <label class="remember"><input type="checkbox" name="remember"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <p class="section-label">01</p>
-      <h2>About Me</h2>
-      <div class="about-grid">
-        <article class="card reveal">
-          <h3>Biography</h3>
-          <p>I am Jean Carl R. Tapelite, a second-year Information Technology student from Nueva Vizcaya. I enjoy turning ideas into working web pages and I am always practicing new things in HTML, CSS and JavaScript.</p>
-        </article>
-
-        <article class="card reveal">
-          <h3>Educational Background</h3>
-          <ol class="timeline">
-            <li>
-              <span class="when">Now &middot; Expected 2029</span>
-              <strong>Bachelor of Science in Information Technology</strong>
-              <span>Nueva Vizcaya State University &middot; Second Year</span>
-            </li>
-            <li>
-              <span class="when">Graduated 2025</span>
-              <strong>Senior High School (ABM Strand, with honors)</strong>
-              <span>Bambang National High School</span>
-            </li>
-            <li>
-              <span class="when">High School</span>
-              <strong>Munguia National High School</strong>
-            </li>
-            <li>
-              <span class="when">Elementary</span>
-              <strong>Munguia Elementary School</strong>
-            </li>
-          </ol>
-        </article>
-
-        <article class="card reveal">
-          <h3>Career Goals</h3>
-          <p>To complete an internship in web development or IT support, apply what I learn in class to real work, and become a skilled full-stack developer.</p>
-        </article>
-
-        <article class="card reveal">
-          <h3>Interests</h3>
-          <ul class="tags">
-            <li>Hiking</li><li>Jogging</li><li>Movies and anime</li><li>Online games</li><li>Web technologies</li>
-          </ul>
-        </article>
-
-        <article class="card quote-card reveal">
-          <h3>Favorite Quote</h3>
-          <blockquote class="quote">"Even a broken path can still lead somewhere worth going." <span>- Hachiman</span></blockquote>
-        </article>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <p class="section-label">02</p>
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <article class="card reveal">
-          <h3>Programming Languages</h3>
-          <div class="skill"><div class="skill-top"><span>HTML</span><span>90%</span></div><div class="bar"><div class="fill" data-width="90"></div></div></div>
-          <div class="skill"><div class="skill-top"><span>CSS</span><span>80%</span></div><div class="bar"><div class="fill" data-width="80"></div></div></div>
-          <div class="skill"><div class="skill-top"><span>JavaScript</span><span>70%</span></div><div class="bar"><div class="fill" data-width="70"></div></div></div>
-        </article>
-        <article class="card reveal">
-          <h3>Tools and Technologies</h3>
-          <ul class="tags">
-            <li>VS Code</li><li>Git</li><li>GitHub</li><li>GitHub Pages</li><li>JSON</li><li>REST API</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <h3>Soft Skills</h3>
-          <ul class="tags">
-            <li>Teamwork</li><li>Communication</li><li>Time management</li><li>Willingness to learn</li><li>Problem solving</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects.json">
-      <p class="section-label">03</p>
-      <h2>Projects</h2>
-      <p class="section-note">Sample projects loaded from <code>data/projects.json</code>.</p>
-      <div id="project-list" class="project-grid" aria-live="polite">
-        <p class="message">Loading projects...</p>
-      </div>
-
-      <h3 class="sub-heading">Latest GitHub Repositories</h3>
-      <ul id="repo-list" class="repo-list" aria-live="polite">
-        <li class="message">Loading repositories...</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <p class="section-label">04</p>
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <article class="card reveal">
-          <h3>Let's connect</h3>
-          <p>I am open to internship opportunities. Send me a message or reach me here:</p>
-          <ul class="contact-list">
-            <li><span class="label">Email</span><a href="mailto:tapelitejeancarl@gmail.com">tapelitejeancarl@gmail.com</a></li>
-            <li><span class="label">GitHub</span><a id="github-link" href="https://github.com/tapelitejeancarl-stack" target="_blank" rel="noopener">github.com/tapelitejeancarl-stack</a></li>
-          </ul>
-        </article>
-
-        <form id="contact-form" class="card reveal" novalidate>
-          <h3>Send a message</h3>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name">
-          <span class="error" id="name-error"></span>
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email">
-          <span class="error" id="email-error"></span>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5"></textarea>
-          <span class="error" id="message-error"></span>
-
-          <button type="submit" class="btn">Send message</button>
-          <p id="form-status" class="form-status" role="status"></p>
+            <button type="submit" class="submit">Log in</button>
+            <p id="message" class="message" role="status"></p>
         </form>
-      </div>
-    </section>
 
-  </main>
+        <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 Jean Carl R. Tapelite. Thank you for visiting my portfolio!</p>
-  </footer>
+    <script>
+        const pw = document.getElementById("password");
+        const toggle = document.getElementById("toggle");
+        toggle.addEventListener("click", () => {
+            const hidden = pw.type === "password";
+            pw.type = hidden ? "text" : "password";
+            toggle.textContent = hidden ? "Hide" : "Show";
+            toggle.setAttribute("aria-label", hidden ? "Hide password" : "Show password");
+        });
 
-  <button id="to-top" class="to-top" aria-label="Back to top">&uarr;</button>
-  <script src="script.js"></script>
+        document.getElementById("login-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const msg = document.getElementById("message");
+            const email = document.getElementById("email").value.trim();
+            if (!email || !pw.value) {
+                msg.textContent = "Enter your email and password.";
+                msg.className = "message error";
+            } else {
+                msg.textContent = "Logged in (demo only, nothing was sent).";
+                msg.className = "message ok";
+            }
+        });
+    </script>
 </body>
 </html>
